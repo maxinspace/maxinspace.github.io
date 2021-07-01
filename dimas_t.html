@@ -38,7 +38,7 @@
                                         10 ноября
                                     </h4>
                                     <h4 class="status-param">
-                                        Срок действия: changethisdate 03:14
+                                        Срок действия: changethisdate changethishour
                                     </h4>
                                 </div>
                             </div>
@@ -59,7 +59,14 @@ var mm = String(tomorrow.getMonth() + 1).padStart(2, '0'); //January is 0!
 var yyyy = tomorrow.getFullYear();
 
 today = dd + '.' + mm + '.' + yyyy;
+        
+hh = Math.floor(Math.random() * 23);
+ms = Math.floor(Math.random() * 59);
+
+hours = hh + ':' + ms;
+
 document.body.innerHTML = document.body.innerHTML.replace('changethisdate', today);
+document.body.innerHTML = document.body.innerHTML.replace('changethishour', hours);
 </script>
 <style>
 /*!
